@@ -9,5 +9,6 @@ services:
     image: migzsixtynine/cppsample:0.1
     tty: true
     volumes:
-      - ./data:/tmp/proj
+      - ./C-Programs:/tmp/proj
+
    

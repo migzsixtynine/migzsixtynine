@@ -34,7 +34,7 @@ int main()
 		{
 			tryagain(y);
 		}
-		ctr=0;
+		ctr==0;
 	}
 	return 0;
 
@@ -342,7 +342,7 @@ int datecompare (int x)
 int tryagain(int y)
 {
 	puts("Do you want to try again? (Y/N)");
-	fflush(stdin);
+	fflush(stdout);
     	gets(&ans);
 	
 	if(strlen(ans)>1)
@@ -351,10 +351,12 @@ int tryagain(int y)
 	}
 	else if(*ans=='N'||*ans=='n'||*ans=='Y'||*ans=='y')
 	{
-		ctr=1;	
+		ctr=1;
 	}
 	else
 	{
 		puts("Invalid answer please try again");
 	}
+	
+	return 0;
 }

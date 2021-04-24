@@ -94,7 +94,7 @@ int fare(y)
 	printf("How many ticket(s)?: ");
 	scanf("%d",&ticket);
 	price = amount * ticket;
-	printf("Total fare is: Php%d",price);
+	printf("Total fare is: Php%d\n",price);
 	return 0;
 }
 
