@@ -9,6 +9,4 @@ services:
     image: migzsixtynine/cppsample:0.1
     volumes:
       - ./data:/tmp/proj
-    command:
-      - ./runner.sh
-      - input.txt
+  
