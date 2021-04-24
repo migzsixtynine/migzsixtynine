@@ -1,12 +1,13 @@
 version: '2'
 
 services:
-  diagram:
+  cppsample:
     build:
       context: .
       dockerfile: ./docker/cppsample.Dockerfile
-    container_name: diagram
+    container_name: cppsample
     image: migzsixtynine/cppsample:0.1
+    tty: true
     volumes:
       - ./data:/tmp/proj
-  
+   
