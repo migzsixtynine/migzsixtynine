@@ -1,0 +1,14 @@
+version: '2'
+
+services:
+  diagram:
+    build:
+      context: .
+      dockerfile: ./docker/cppsample.Dockerfile
+    container_name: diagram
+    image: jesmigel/diagram:0.1
+    volumes:
+      - ./data:/tmp/proj
+    command:
+      - ./runner.sh
+      - input.txt
