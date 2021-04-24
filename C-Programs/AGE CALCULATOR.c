@@ -40,7 +40,7 @@ int main()
 
 }
 
-int datecheck(month,day,year)
+int datecheck(int month,int day,int year)
 {
 	if (year>0 && year<=2021)
 	{
@@ -102,7 +102,7 @@ int datecheck(month,day,year)
 	return 0;
 }
 
-int datecompare (x)
+int datecompare (int x)
 {
 	if (year1==year2)
 	{
@@ -339,11 +339,11 @@ int datecompare (x)
 	return 0;
 }
 
-int tryagain(y)
+int tryagain(int y)
 {
 	puts("Do you want to try again? (Y/N)");
 	fflush(stdin);
-    gets(ans);
+    	gets(&ans);
 	
 	if(strlen(ans)>1)
 	{
