@@ -16,7 +16,7 @@ int main()
 	while(stx==0)
 	{
 		puts("Northbound or Southbound? <N/S>: ");
-		gets(ans);
+		scanf("%c", &*ans);
 		station(x);
 	}
 
@@ -40,7 +40,7 @@ int main()
 	return 0;
 }
 
-int stationcheckst(stz)
+int stationcheckst(int stz)
 {
 	if (st==0)
 	{
@@ -57,7 +57,7 @@ int stationcheckst(stz)
 	return 0;
 }
 
-int stationchecken(enz)
+int stationchecken(int enz)
 {
 	if(en<=st)
 	{
@@ -74,7 +74,7 @@ int stationchecken(enz)
 	return 0;
 }
 
-int fare(y)
+int fare(int y)
 {
 	dist = en-st;
 	if(dist<=5)
@@ -98,7 +98,7 @@ int fare(y)
 	return 0;
 }
 
-int station(x)
+int station(int x)
 {
 	if(strlen(ans)>1)
 	{

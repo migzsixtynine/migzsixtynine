@@ -11,8 +11,8 @@ char months[13][20]={"","January","February","March","April","May","June","July"
 
 int main()
 {
-	while(*ans=='Y'||*ans=='y')
-	{
+	/*while(*ans=='Y'||*ans=='y')
+	{*/
 		while(valid==0)
 		{
 			printf("Input your birthday (mm/dd/yy)\n");
@@ -30,19 +30,25 @@ int main()
 	
 		datecompare(x);
 		
-		while(ctr==0)
+		/*while(ctr==0)
 		{
+			printf("Do you want to try again? (Y/N)");
+    			scanf("%c",&*ans);
+    			if(*ans == 'N' || *ans == 'n')
+    			{
+    				break;
+    			}
 			tryagain(y);
 		}
 		ctr==0;
-	}
+	}*/
 	return 0;
 
 }
 
 int datecheck(int month,int day,int year)
 {
-	if (year>0 && year<=2021)
+	if (year>0 && year<=2050)
 	{
 		if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0))
 		{
@@ -81,7 +87,8 @@ int datecheck(int month,int day,int year)
 			{
 				if(day>31)
 				{
-					printf("%s is up to 31 only, please try again\n",months[month]);				
+					printf("%s is up to 31 only, please try again\n",months[month]);
+					fflush(stdout);				
 				}
 				else
 				{
@@ -117,9 +124,9 @@ int datecompare (int x)
 				if(month1==3)
 				{
 					if ((year1 % 4 == 0 && year1 % 100 != 0) || (year1 % 400 == 0)) 
-            	{
-               		day1 += 29;
-            	}
+            				{
+               				day1 += 29;
+            				}
             	else
             	{	
                 	day1 += 28;
@@ -341,15 +348,11 @@ int datecompare (int x)
 
 int tryagain(int y)
 {
-	puts("Do you want to try again? (Y/N)");
-	fflush(stdout);
-    	gets(&ans);
-	
 	if(strlen(ans)>1)
 	{
 		puts("Invalid answer please try again");
 	}
-	else if(*ans=='N'||*ans=='n'||*ans=='Y'||*ans=='y')
+	else if(*ans=='Y'||*ans=='y')
 	{
 		ctr=1;
 	}
